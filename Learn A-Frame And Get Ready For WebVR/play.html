@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    AFRAME.registerComponent('log', {
+      schema: {
+        event: { type: 'string', default: '' },
+        message: { type: 'string', default: 'Hello from \'bar\' component' }
+      },
+      init: function () {
+        let self = this
+        this.eventHandlerFn = function () { console.log(self.data.message); }
+      },
+      update: function (oldData) {
+        if (this.data.event) {
+          this.el.addEventListener(this.data.event, this.eventHandlerFn);
+        } else {
+          console.log(this.data.message)
+        }
+      }
+    });
+  </script>
+</body>
+<a-scene>
+  <a-entity log="message: 😀"></a-entity>
+</a-scene>
+
+</html>
