@@ -1,14 +1,14 @@
-{ pkgs ? import <nixpkgs> {} }:
+with import <nixpkgs> { };
 
-with pkgs;
-
-let pythonEnv = python3.withPackages (ps: [
-  ps.jupyter
-  ps.jupyterlab
-]);
-
-in mkShell {
-  nativeBuildInputs = [ mono pythonEnv dotnet-sdk_3 ];
+mkShell {
+  buildInputs = with python3Packages; [ 
+    mono 
+    dotnet-sdk_3 
+    # python packages
+    odfpy
+    jupyter
+    jupyterlab
+  ];
   shellHook = ''
     export DOTNET_ROOT=${dotnet-sdk_3}
     export PATH="$PATH:/home/plumps/.dotnet/tools"

@@ -2,3 +2,6 @@
 	path = rustlings
 	url = https://github.com/mi-skam/rustlings.git
 	branch = plumps-progress
+[submodule "jugendhackt/ActionCoin"]
+	path = jugendhackt/ActionCoin
+	url = https://github.com/Jugendhackt/ActionCoin.git
