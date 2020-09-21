@@ -1,0 +1,18 @@
+{
+  "name": "professionellEntwickelnMitJS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc my.ts",
+    "start": "npx nodemon out/my.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "typescript": "^4.0.3"
+  }
+}
