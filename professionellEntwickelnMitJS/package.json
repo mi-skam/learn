@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc my.ts",
-    "start": "npx nodemon out/my.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc -w my.ts --outDir out --sourceMap -t ES5",
+    "start": "npx nodemon out/my.js"
   },
   "keywords": [],
   "author": "",
