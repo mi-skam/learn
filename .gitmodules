@@ -5,3 +5,6 @@
 [submodule "jugendhackt/ActionCoin"]
 	path = jugendhackt/ActionCoin
 	url = https://github.com/Jugendhackt/ActionCoin.git
+[submodule "vscode-dev-containers"]
+	path = vscode-dev-containers
+	url = https://github.com/microsoft/vscode-dev-containers
